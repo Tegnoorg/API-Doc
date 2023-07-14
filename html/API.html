@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>API &#8212; GIS Package Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Citations" href="citations.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="Citations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GIS Package Documentation  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h1>
+<p>This section provides detailed documentation for the classes and methods available in the GIS package.</p>
+<section id="geographicpoint">
+<h2>GeographicPoint<a class="headerlink" href="#geographicpoint" title="Permalink to this heading">¶</a></h2>
+<p>Represents a geographic point with latitude, longitude, and elevation coordinates.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="GeographicPoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeographicPoint</span></span><a class="headerlink" href="#GeographicPoint" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elevation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new instance of the GeographicPoint class with the given longitude, latitude, and elevation coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>latitude</strong> (<em>float</em>) – Floating-point value within the range -90 to 90, representing the latitude.</p></li>
+<li><p><strong>longitude</strong> (<em>float</em>) – Floating-point value within the range -180 to 180, representing the longitude.</p></li>
+<li><p><strong>elevation</strong> (<em>float</em>) – Value in meters above the datum (≈ sea level). Use elevation = 0 for 2D points. This will allow for 2D points to be computed with 3D points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Throws ValueError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If latitude or longitude is outside the valid range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.setLatitude">
+<span class="sig-name descname"><span class="pre">setLatitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.setLatitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the latitude to the new latitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>latitude</strong> (<em>float</em>) – Floating-point value within the range -90 to 90, representing the new latitude.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Throws ValueError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If latitude is outside the valid range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.setLongitude">
+<span class="sig-name descname"><span class="pre">setLongitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.setLongitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the longitude to the new longitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>longitude</strong> (<em>float</em>) – Floating-point value within the range -180 to 180, representing the new longitude.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Throws ValueError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If longitude is outside the valid range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.setElevation">
+<span class="sig-name descname"><span class="pre">setElevation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elevation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.setElevation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the elevation to the new elevation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>elevation</strong> (<em>float</em>) – Value in meters above the datum (≈ sea level). Use elevation = 0 for 2D points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.setTimezone">
+<span class="sig-name descname"><span class="pre">setTimezone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timezone</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.setTimezone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the timezone for the geographic point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timezone</strong> (<em>str</em>) – A string representing the timezone of the geographic point.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GeographicPoint.getTimezone">
+<span class="sig-name descname"><span class="pre">getTimezone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GeographicPoint.getTimezone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the timezone of the geographic point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The timezone of the geographic point.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="polygon">
+<h2>Polygon<a class="headerlink" href="#polygon" title="Permalink to this heading">¶</a></h2>
+<p>Represents a polygon defined by a collection of points.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Polygon">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Polygon</span></span><a class="headerlink" href="#Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Polygon.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new instance of the Polygon class with the given collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of points representing the vertices of the polygon.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if a point is inside the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> (<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a>) – Point of the geographical coordinates.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the point is inside the polygon, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.polygonRemove">
+<span class="sig-name descname"><span class="pre">polygonRemove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.polygonRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the given point from the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> – Geographic point to be removed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.polygonAdd">
+<span class="sig-name descname"><span class="pre">polygonAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.polygonAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the given point to the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> – Geographic point to be added.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.getArea">
+<span class="sig-name descname"><span class="pre">getArea</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.getArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the area of the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Area of the polygon in square meters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.getPerimeter">
+<span class="sig-name descname"><span class="pre">getPerimeter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.getPerimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the perimeter of the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Perimeter of the polygon in meters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Polygon.isConvex">
+<span class="sig-name descname"><span class="pre">isConvex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Polygon.isConvex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the polygon is convex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the polygon is convex, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="track">
+<h2>Track<a class="headerlink" href="#track" title="Permalink to this heading">¶</a></h2>
+<p>Represents a track or path defined by a collection of points.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Track">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Track</span></span><a class="headerlink" href="#Track" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Track.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Track.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new instance of the Track class with the given collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of points representing the track or path.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Track.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Track.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the length of the track.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Length of the track in meters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Track.trackRemove">
+<span class="sig-name descname"><span class="pre">trackRemove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Track.trackRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the given point from the track.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> – Geographic point to be removed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Track.trackAdd">
+<span class="sig-name descname"><span class="pre">trackAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Track.trackAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the given point to the track.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> – Geographic point to be added.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="gpxparser">
+<h2>GPXParser<a class="headerlink" href="#gpxparser" title="Permalink to this heading">¶</a></h2>
+<p>Parses GPX files and constructs data structures.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="GPXParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GPXParser</span></span><a class="headerlink" href="#GPXParser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="GPXParser.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GPXParser.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new instance of the GPXParser class with the given GPX file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – Path to the GPX file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Throws FileNotFoundError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the specified GPX file does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GPXParser.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GPXParser.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the GPX file and returns the constructed data structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A data structure representing the GPX file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple[List[<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a>], str]</p>
+</dd>
+<dt class="field-odd">Throws ValueError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the GPX file is invalid or has missing data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GPXParser.getTrackNames">
+<span class="sig-name descname"><span class="pre">getTrackNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GPXParser.getTrackNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the names of all tracks in the GPX file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of names of all the tracks.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GPXParser.getTrackPoints">
+<span class="sig-name descname"><span class="pre">getTrackPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">track_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GPXParser.getTrackPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the points of a specific track in the GPX file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>track_name</strong> (<em>str</em>) – Name of the track to retrieve points for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Points of the specific track.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="index.html#Track" title="Track">Track</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startPoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endPoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the distance from startPoint to endPoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startPoint</strong> (<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a>) – The start point.</p></li>
+<li><p><strong>endPoint</strong> – The end point.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance in meters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="farthestPoint">
+<span class="sig-name descname"><span class="pre">farthestPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pointsCollection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#farthestPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the farthest points in the collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pointsCollection</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of all points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An List of 2 points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shortestPoint">
+<span class="sig-name descname"><span class="pre">shortestPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pointsCollection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shortestPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the shortest points in the collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pointsCollection</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of all points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An List of 2 points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getAllPointsIn">
+<span class="sig-name descname"><span class="pre">getAllPointsIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">borderPoints</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getAllPointsIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Using the List of the borderPoints, it returns points within the border.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>borderPoints</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of all points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An List of points within the border points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="averagePoint">
+<span class="sig-name descname"><span class="pre">averagePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#averagePoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average point from a collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The average point.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="isClockwise">
+<span class="sig-name descname"><span class="pre">isClockwise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#isClockwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if a sequence of points represents a clockwise or counterclockwise polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of points representing the polygon vertices.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the points form a clockwise polygon, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="averageDistance">
+<span class="sig-name descname"><span class="pre">averageDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#averageDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average distance between points from a collection of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>List</em><em>[</em><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint"><em>GeographicPoint</em></a><em>]</em>) – List of points.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The average distance in meters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="index.html#GeographicPoint" title="GeographicPoint">GeographicPoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="usage-examples">
+<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Permalink to this heading">¶</a></h2>
+<section id="example-1-finding-the-farthest-apart-points">
+<h3>Example 1: Finding the Farthest Apart Points<a class="headerlink" href="#example-1-finding-the-farthest-apart-points" title="Permalink to this heading">¶</a></h3>
+<p>Let’s say we have a collection of 2D geographic points represented by a list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">points_collection</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">GeographicPoint</span><span class="p">(</span><span class="mf">45.123</span><span class="p">,</span> <span class="o">-</span><span class="mf">78.456</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># Point A</span>
+    <span class="n">GeographicPoint</span><span class="p">(</span><span class="mf">48.789</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.234</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># Point B</span>
+    <span class="n">GeographicPoint</span><span class="p">(</span><span class="mf">46.567</span><span class="p">,</span> <span class="o">-</span><span class="mf">79.012</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># Point C</span>
+    <span class="c1"># Add more points as needed</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>To find the two points that are farthest apart from each other, we can use the <cite>farthestPoint</cite> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">farthest_points</span> <span class="o">=</span> <span class="n">farthestPoint</span><span class="p">(</span><span class="n">points_collection</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <cite>farthest_points</cite> variable will now hold a List containing the two points that are farthest apart.</p>
+<p>The distance between the two farthest points can be calculated using the <cite>getDistance</cite> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distance</span> <span class="o">=</span> <span class="n">getDistance</span><span class="p">(</span><span class="n">farthest_points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">farthest_points</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The variable <cite>distance</cite> will now hold the distance in meters between the two farthest points.</p>
+</section>
+<section id="example-2-using-wikipedia-articles-to-find-points-in-canada">
+<h3>Example 2: Using Wikipedia Articles to Find Points in Canada<a class="headerlink" href="#example-2-using-wikipedia-articles-to-find-points-in-canada" title="Permalink to this heading">¶</a></h3>
+<p>Assuming we have the following data:</p>
+<ol class="arabic simple">
+<li><p>A collection of 2D points representing the borders of Canada, stored in the <cite>canada_borders</cite> list.</p></li>
+<li><p>A collection of geographic coordinates of Wikipedia articles, stored in the <cite>wikipedia_articles</cite> list.</p></li>
+</ol>
+<p>To find all Wikipedia articles referencing a point within Canada, we can follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Create a <cite>Polygon</cite> object using the <cite>canada_borders</cite> list of points:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">canada_polygon</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">canada_borders</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Iterate through the <cite>wikipedia_articles</cite> list and check if each article’s location is within Canada:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wikipedia_articles_points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">wikipedia_articles</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">canada_polygon</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">article</span><span class="p">):</span>
+        <span class="n">wikipedia_articles_points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, the <cite>wikipedia_articles_points</cite> list will contain all Wikipedia articles whose locations fall within the borders of Canada.</p>
+</section>
+<section id="example-3-drawing-user-s-path-on-google-maps-from-gpx-data">
+<h3>Example 3: Drawing User’s Path on Google Maps from GPX Data<a class="headerlink" href="#example-3-drawing-user-s-path-on-google-maps-from-gpx-data" title="Permalink to this heading">¶</a></h3>
+<p>Assuming the user’s GPS data is recorded in a GPX file named “user_path.gpx.”</p>
+<p>To draw the user’s path on Google Maps, we need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Parse the GPX file using the <cite>GPXParser</cite> class:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gpx_parser</span> <span class="o">=</span> <span class="n">GPXParser</span><span class="p">(</span><span class="s2">&quot;user_path.gpx&quot;</span><span class="p">)</span>
+<span class="n">user_track_points</span><span class="p">,</span> <span class="n">track_name</span> <span class="o">=</span> <span class="n">gpx_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create a <cite>Track</cite> object using the <cite>user_track_points</cite> list:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user_track</span> <span class="o">=</span> <span class="n">Track</span><span class="p">(</span><span class="n">user_track_points</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Calculate the length of the user’s track:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">track_length</span> <span class="o">=</span> <span class="n">user_track</span><span class="o">.</span><span class="n">length</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Now, we have the user’s track data, and we can use this data to draw the path on Google Maps.</p></li>
+</ol>
+<p>Note: To draw the path on Google Maps, you’ll need to use the Google Maps API or other mapping libraries that support drawing paths from geographic data.</p>
+<p>In the given documentation, the methods/functions do not specify any explicit “throws” statements. Therefore, it can be assumed that these methods/functions do not throw any specific exceptions or errors and rely on the built-in Python exceptions when needed. However, it’s always a good practice to handle exceptions appropriately when using these methods/functions in a real application to avoid unexpected behavior.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">API</a><ul>
+<li><a class="reference internal" href="#geographicpoint">GeographicPoint</a><ul>
+<li><a class="reference internal" href="#GeographicPoint"><code class="docutils literal notranslate"><span class="pre">GeographicPoint</span></code></a><ul>
+<li><a class="reference internal" href="#GeographicPoint.__init__"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#GeographicPoint.setLatitude"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.setLatitude()</span></code></a></li>
+<li><a class="reference internal" href="#GeographicPoint.setLongitude"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.setLongitude()</span></code></a></li>
+<li><a class="reference internal" href="#GeographicPoint.setElevation"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.setElevation()</span></code></a></li>
+<li><a class="reference internal" href="#GeographicPoint.setTimezone"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.setTimezone()</span></code></a></li>
+<li><a class="reference internal" href="#GeographicPoint.getTimezone"><code class="docutils literal notranslate"><span class="pre">GeographicPoint.getTimezone()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polygon">Polygon</a><ul>
+<li><a class="reference internal" href="#Polygon"><code class="docutils literal notranslate"><span class="pre">Polygon</span></code></a><ul>
+<li><a class="reference internal" href="#Polygon.__init__"><code class="docutils literal notranslate"><span class="pre">Polygon.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.contains"><code class="docutils literal notranslate"><span class="pre">Polygon.contains()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.polygonRemove"><code class="docutils literal notranslate"><span class="pre">Polygon.polygonRemove()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.polygonAdd"><code class="docutils literal notranslate"><span class="pre">Polygon.polygonAdd()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.getArea"><code class="docutils literal notranslate"><span class="pre">Polygon.getArea()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.getPerimeter"><code class="docutils literal notranslate"><span class="pre">Polygon.getPerimeter()</span></code></a></li>
+<li><a class="reference internal" href="#Polygon.isConvex"><code class="docutils literal notranslate"><span class="pre">Polygon.isConvex()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#track">Track</a><ul>
+<li><a class="reference internal" href="#Track"><code class="docutils literal notranslate"><span class="pre">Track</span></code></a><ul>
+<li><a class="reference internal" href="#Track.__init__"><code class="docutils literal notranslate"><span class="pre">Track.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#Track.length"><code class="docutils literal notranslate"><span class="pre">Track.length()</span></code></a></li>
+<li><a class="reference internal" href="#Track.trackRemove"><code class="docutils literal notranslate"><span class="pre">Track.trackRemove()</span></code></a></li>
+<li><a class="reference internal" href="#Track.trackAdd"><code class="docutils literal notranslate"><span class="pre">Track.trackAdd()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gpxparser">GPXParser</a><ul>
+<li><a class="reference internal" href="#GPXParser"><code class="docutils literal notranslate"><span class="pre">GPXParser</span></code></a><ul>
+<li><a class="reference internal" href="#GPXParser.__init__"><code class="docutils literal notranslate"><span class="pre">GPXParser.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#GPXParser.parse"><code class="docutils literal notranslate"><span class="pre">GPXParser.parse()</span></code></a></li>
+<li><a class="reference internal" href="#GPXParser.getTrackNames"><code class="docutils literal notranslate"><span class="pre">GPXParser.getTrackNames()</span></code></a></li>
+<li><a class="reference internal" href="#GPXParser.getTrackPoints"><code class="docutils literal notranslate"><span class="pre">GPXParser.getTrackPoints()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#getDistance"><code class="docutils literal notranslate"><span class="pre">getDistance()</span></code></a></li>
+<li><a class="reference internal" href="#farthestPoint"><code class="docutils literal notranslate"><span class="pre">farthestPoint()</span></code></a></li>
+<li><a class="reference internal" href="#shortestPoint"><code class="docutils literal notranslate"><span class="pre">shortestPoint()</span></code></a></li>
+<li><a class="reference internal" href="#getAllPointsIn"><code class="docutils literal notranslate"><span class="pre">getAllPointsIn()</span></code></a></li>
+<li><a class="reference internal" href="#averagePoint"><code class="docutils literal notranslate"><span class="pre">averagePoint()</span></code></a></li>
+<li><a class="reference internal" href="#isClockwise"><code class="docutils literal notranslate"><span class="pre">isClockwise()</span></code></a></li>
+<li><a class="reference internal" href="#averageDistance"><code class="docutils literal notranslate"><span class="pre">averageDistance()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage-examples">Usage Examples</a><ul>
+<li><a class="reference internal" href="#example-1-finding-the-farthest-apart-points">Example 1: Finding the Farthest Apart Points</a></li>
+<li><a class="reference internal" href="#example-2-using-wikipedia-articles-to-find-points-in-canada">Example 2: Using Wikipedia Articles to Find Points in Canada</a></li>
+<li><a class="reference internal" href="#example-3-drawing-user-s-path-on-google-maps-from-gpx-data">Example 3: Drawing User’s Path on Google Maps from GPX Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="previous chapter">Introduction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="citations.html"
+                          title="next chapter">Citations</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/API.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="Citations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GIS Package Documentation  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright .
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    </div>
+  </body>
+</html>
